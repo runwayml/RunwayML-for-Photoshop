@@ -15,7 +15,7 @@ Access [RunwayML](https://runwayml.com) directly from [Adobe Photoshop](www.adob
 
 ## Installation
 
-1) [Download the latest version of the plugin](https://github.com/runwayml/photoshop/releases).
+1) [Download the latest version of the plugin](https://github.com/runwayml//RunwayML-for-Photoshop/releases).
 
 2) Set debug mode:
 
