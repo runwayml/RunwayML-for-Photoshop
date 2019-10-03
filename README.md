@@ -5,7 +5,8 @@
 
 Access [RunwayML](https://runwayml.com) directly from [Adobe Photoshop](www.adobe.com/photoshop‎): You can use this plugin to generate images, apply style transfer to your photos, get depth estimation from 2D images, generate new pieces of texts to your designs and more.
 
-( add gif  here )
+![RunwayML for Photoshop](images/ps-banner.gif)
+
 ## Prerequisites
 
 * [RunwayML](https://runwayml.com/): Download the latest release of [RunwayML](https://runwayml.com/download) and sign up for an account. Visit our [installation guide](https://learn.runwayml.com/#/getting-started/installation) for more details. If you encounter any issues installing RunwayML, feel free to contact us through the [support page](https://support.runwayml.com).
