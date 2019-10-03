@@ -84,7 +84,7 @@ The model's output will be displayed in the Artboard as a new layer.
 
 ### (4) Run
 
-Once you click `Run`, RunwayML will start `running` and `processing` the input of the selected model. Once the model is `running`, you can click `Re-Generate` to re-run inference on the current inputs using the selected model.
+Once you click `Run and Generate`, RunwayML will start `running` and `processing` the input of the selected model. Once the model is `running`, you can click `Re-Generate` to re-run inference on the current inputs using the selected model.
 
 #### Run Options
 
