@@ -45,11 +45,13 @@ In order to use this plugin, you'll need to have [RunwayML](https://runwayml.com
 
 2) In Photoshop you'll find the Extension panel under ```Window > Extensions > RunwayML```.
 
-![RunwayML for Photoshop](images/ps-plugin.jpg)
+![RunwayML for Photoshop](images/open-plugin.gif)
 
 ### Using the RunwayML Panel
 
 Once the plugin is installed, you can browse and run models directly from the RunwayML panel window. The panel is split into four sections: the (1) Model Selection, (2) Input, (3) Output, and (4) Run Options.
+
+![RunwayML for Photoshop](images/ps-plugin.jpg)
 
 ### (1) Model Selection
   
@@ -85,7 +87,7 @@ The model's output will be displayed in the Artboard as a new layer.
 
 ### (4) Run
 
-Once you click `Run`, RunwayML will start `running` and `processing` the input of the selected model. Once the model is `running`, you can click `Re-Generate` to re-run inference on the current inputs using the selected model.
+Once you click `Run and Generate`, RunwayML will start `running` and `processing` the input of the selected model. Once the model is `running`, you can click `Re-Generate` to re-run inference on the current inputs using the selected model.
 
 #### Run Options
 
