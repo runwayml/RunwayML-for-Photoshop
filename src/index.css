@@ -1,0 +1,708 @@
+*{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+*:focus{
+  outline: none !important;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+  margin: 0px;
+  padding: 0px;
+}
+
+.RunwayNotFound{
+  background: #2b2b2b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+  padding: 0 20px;
+  color: white;
+}
+
+.RunwayNotFound a{
+  color: #73E5A2;
+}
+
+.RunningModelsNotification{
+  font-weight: bold;
+  margin-right: 5px;
+  padding: 5px;
+  border-radius: 4px;
+  height: 10px;
+  width: 10px;
+  font-size: 8px;
+}
+
+.Header {
+  width: 100%;
+  background: rgb(29, 29, 29);
+  border-bottom: 1px solid rgb(59, 59, 59);
+  display: flex;
+  height: 67px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+  .Header input {
+    height: 32px;
+    padding: 11px;
+    background: #2b2b2b;
+    border-radius: 4px;
+    border: 1px solid #2b2b2b;
+    color: #fff;
+    width: 90%;
+  }
+  
+.Logo{
+  width: 20px;
+  height: 20px;
+  margin: 13px 0 0 13px;
+}
+
+.NavigateBar{
+  display: flex;
+  overflow: hidden;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.NavigateItem{
+  flex: 1;
+  background: #232323;
+}
+
+.NavigateButton{
+  height: 50px;
+  margin: 0;
+}
+
+.NavigateButton:hover{
+  background: #292929;
+}
+
+.AllModels {
+  overflow-y: scroll;
+  margin-top: 0;
+  height: calc(100% - 160px);
+  background: #2b2b2b;
+}
+
+.NoAllModels{
+  height: calc(100% - 160px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: #2b2b2b;
+  flex-direction: column;
+}
+
+.Model {
+  align-items: center;
+  cursor: default;
+  border-bottom: 1px solid rgb(59, 59, 59);
+  width: 100%;
+  display: flex;
+  position: relative;
+  height: 60px;
+  justify-content: left;
+  align-content: center;
+  background: #151515;
+}
+
+.Model:hover{
+  background: #2bfda4;  
+}
+
+.Model:hover p{
+  color: #2b2b2b !important;
+}
+.ModelSelected{
+  background: #2b2b2b;
+  
+}
+
+.ModelSelected p{
+  color: #2bfda4 !important;
+}
+
+    .Model.ModelActive, .Model.ModelActive.OneClick {
+      cursor: pointer;
+    }
+
+    .ModelActive.GPU {
+      /*background: rgba(255,0,255,.05);*/
+    }
+
+    .Model.hidden {
+      display: none;
+    }
+
+  .ModelBusy {
+    cursor: progress !important;
+    pointer-events: none;
+  }
+
+.ModelDisplayName {
+  color: #f5f5f5;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 10px;
+  user-select: none;
+  flex: 3;
+}
+  .ModelButtonWrapper{
+    margin-right: 15px;
+  }
+  .ModelButtonWrapper button{
+    background: rgba(0,0,0,.1);
+    color: #fff;
+    font-size: 10px;
+    border-radius: 2px;
+    border: 1px solid rgba(255,255,255,.5);
+    padding: 2px 5px;
+    margin-right: 10px;
+  }
+
+  .ModelOptions{
+    max-height: 1000px;
+    background: #313131;
+    border-bottom: 1px solid #4a4a4a;
+    padding: 10px 5px 15px 5px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+  }
+
+  .ModelInfo{
+    background: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    border-radius: 3px;
+    overflow: hidden;
+    border: 1px solid #3e3e3e;
+    position: absolute;
+    z-index: 100;
+    right: 23px;
+    top: 20px;
+    width: 85%;
+    max-width: 300px;
+  }
+
+  .ModelInfoClose{
+    position: absolute;
+    padding: 0 5px;
+    height: 18px;
+    background: #3a3a3a;
+    color: white;
+    border-radius: 4px;
+    right: 15px;
+    top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    font-size: 10px;
+    user-select: none;
+  }
+  .ModelInfoClose:hover{
+    background: white;
+    color: #3a3a3a;
+    cursor: pointer;
+  }
+
+  .CoverImage{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .ModelDescription{
+    padding: 15px;
+    font-weight: 800;
+  }
+
+  .ModelOptions select {
+    width: 100%;
+  }
+
+  .ModelOptions button {
+    margin: 5px 0;
+  }
+
+  .ModelActive .ModelDisplayName {
+    opacity: 1;
+    background-image: url(./img/dot-active.svg);
+    cursor: pointer !important;
+  }
+
+
+  .ModelActive.GPU .ModelDisplayName::after {
+    content: "GPU";
+    font-size: .8em;
+    background: rgba(255,255,255,.1);
+    border-radius: 2px;
+    padding: 1px 2px;
+    margin-left: .4em;
+  }
+
+  .ModelActive:hover .ModelDisplayName {
+    background-color: rgb(96, 96, 96);
+  }
+
+  .ModelBusy .ModelDisplayName {
+    background-image: url(./img/Runway-loader.svg);
+  }
+
+
+.Model .inputs {
+  max-height: 0;
+  padding: 0;
+  /* overflow: hidden; */
+  transition: all .3s ease-in-out;
+}
+
+.Model.expanded .inputs {
+  max-height: 500px;
+  /* overflow: visible; */
+}
+
+
+.InputType{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.InputType label {
+  margin: 5px 0;
+}
+
+.InputType select, input, textarea, button {
+  width: 100%;
+  margin: 5px 0;
+  border: none;
+}
+
+.InputType select{
+  width: 100%;
+  margin: 2px 0;
+  color: #1c1c1c;
+  height: 30px;
+  padding-left: 11px;
+  margin-bottom: 5px;
+}
+
+
+.inputs {
+  background: rgba(0,0,0,.25);
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+  /* border-top: 1px solid rgb(55, 55, 55); */
+  cursor: default;
+}
+
+  .inputs div:first-child {
+    padding-top: 6px;
+  }
+
+  .inputs div:last-child {
+    padding-bottom: 6px;
+  }
+
+  .inputs div {
+    margin: 6px 10px 6px 34px;
+    display: flex;
+    overflow: hidden;
+  }
+
+    .inputs div label, .inputs div p {
+      font-size: 11px;
+      font-weight: 500;
+      color: #bbb;
+      height: 1.5em;
+      flex: 1;
+    }
+
+    .inputs div p {
+      height: auto;
+    }
+
+    .inputs div input, .inputs div select, .inputs textarea {
+      flex: 2;
+    }
+
+    .inputs span {
+      font-size: 10px;
+      width: 2.5em;
+      height: 1.5em;
+      line-height: 1.3em;
+      padding: 0 2px;
+      margin-left: 5px;
+      text-align: right;
+      color: #bbb;
+      border-radius: 2px;
+      border: 1px solid #666;
+      background: rgba(0,0,0,.1);
+    }
+
+    .Model select {
+      -webkit-appearance: none;
+      max-width: 193px;
+      border-radius: 2px;
+      border: 1px solid #666;
+      background: rgba(0,0,0,.1);
+      color: rgb(0, 0, 0);
+      padding: 0 5px;
+    }
+
+      .Model select::after {
+        content: " ";
+        width: 0;
+        height: 0;
+        border-left: 3px solid transparent;
+        border-right: 3px solid transparent;
+        border-top: 3px solid #fff;
+        position: absolute;
+        margin-left: -20px;
+      }
+
+      .Model select option {
+        color: #000;
+        line-height: 1.5em;
+      }
+
+    .Model input[type=range] {
+      -webkit-appearance: none;
+      height: 11px;
+      background: none;
+      border-radius: 3px;
+    }
+      
+      span.range {
+        font-size: 8px;
+        color: #0e0e0e;
+      }
+    .Model textarea {
+      border-radius: 2px;
+      width: 200px;
+      border: 1px solid #666;
+      background: rgba(0,0,0,.1);
+      color: #fff;
+      padding: 0 5px;
+    }
+
+
+.Model button {
+  background: rgba(0,0,0,.1);
+  color: #fff;
+  font-size: 10px;
+  border-radius: 2px;
+  border: 1px solid rgba(255,255,255,.5);
+  padding: 2px 5px;
+}
+
+.Model.ModelActive button {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.Model.ModelBusy button {
+  opacity: .5;
+  user-select: none;
+}
+
+.Model button:hover, .Model.ModelActive.OneClick:hover button {
+  border-color: #2bfda4;
+  color: #2bfda4;
+}
+
+.Model.ModelActive button:active, .Model.ModelActive.OneClick:active button {
+  color: #000 !important;
+  background: #2bfda4;
+}
+
+.ButtonActions{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.ButtonActions button{
+  flex: 1;
+  margin: 0 2px;
+}
+
+.buttonCTA {
+  padding: 10px;
+  background: #288edf;
+  color: white;
+  border-radius: 2px;
+  text-shadow: 0 -1px rgba(0,0,0,.36);
+}
+
+.buttonCTA:hover{
+  background: #4ca1e4;
+}
+
+.buttonCTASTOP {
+  padding: 10px;
+  background: #585858;
+  color: white;
+  border-radius: 2px;
+  text-shadow: 0 -1px rgba(0,0,0,.36);
+}
+
+.buttonCTASTOP:hover{
+  background: #f86978;
+}
+
+.buttonCTADISABLED{
+  padding: 10px;
+  background: #272727;
+  color: rgb(59, 59, 59);
+  border-radius: 4px;
+  text-shadow: 0 -1px rgba(0,0,0,.36);
+  user-select: none;
+}
+
+.Footer{
+  background: #2d2d2d;
+  border-top: 1px solid #545454;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+}
+
+.Footer > div {
+  flex: 1;
+  margin: 0px;
+  padding: 0;
+}
+
+.SwitchLocationWrapper{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.Footer .SwitchLocation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #212121;
+  height: 97%;
+  color: white;
+  font-size: 10px;
+  text-shadow: 0 -1px rgba(0,0,0,.36);
+
+}
+
+.FooterStopButton button{
+  width: 100%;
+  height: 40px;
+  margin: 0 auto;
+  font-size: 12px;
+  border-radius: 0 !important;
+}
+
+
+.Flash {
+  position: absolute;
+  z-index: 400000;
+  bottom: 60;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  animation: show .2s 1;
+}
+
+.FlashMessageWrapper{
+  background: #2bfda4;
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #1c1c1c;
+}
+
+
+.FlashMessageWrapperError{
+  background: #e76969;
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #1c1c1c;
+}
+
+.FlashMessage{
+  flex:1;
+}
+
+/* SPINNER */
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 3px;
+  height: 3px;
+}
+.loader {
+  font-size: 8px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 1.1em solid rgba(222, 222, 222, 0.4);
+  border-right: 1.1em solid rgba(222, 222, 222, 0.4);
+  border-bottom: 1.1em solid rgba(222, 222, 222, 0.4);
+  border-left: 1.1em solid #ffffff;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/* SWITCH */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #292929; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #474747; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #474747; 
+}
+
+@keyframes show {
+  from {
+    display: none;
+    bottom: -100px;
+
+  }
+  to {
+    display: block;
+    bottom: 30px;
+  }
+}
