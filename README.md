@@ -42,11 +42,13 @@ In order to use this plugin, you'll need to have [RunwayML](https://runwayml.com
 
 2) In Photoshop you'll find the Extension panel under ```Window > Extensions > Runway```.
 
-![RunwayML for Photoshop](images/ps-plugin.jpg)
+![RunwayML for Photoshop](images/open-plugin.gif)
 
 ### Using the RunwayML Panel
 
 Once the plugin is installed, you can browse and run models directly from the RunwayML panel window. The panel is split into four sections: the (1) Model Selection, (2) Input, (3) Output, and (4) Run Options.
+
+![RunwayML for Photoshop](images/ps-plugin.jpg)
 
 ### (1) Model Selection
   
