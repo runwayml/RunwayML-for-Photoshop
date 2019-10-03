@@ -1,0 +1,8 @@
+<ExtensionList>
+    <Extension Id="com.runwayml.photoshop.panel">
+       <HostList>
+           <Host Name="PHXS" Port="8088"/>
+           <Host Name="PHSP" Port="8088"/>
+        </HostList>
+    </Extension>
+</ExtensionList>   

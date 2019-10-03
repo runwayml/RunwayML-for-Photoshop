@@ -51,7 +51,8 @@ module.exports = (env, argv) => ({
     new CopyWebpackPlugin([
       { from: 'CSXS', to: '../CSXS' },
       { from: 'host', to: '../host' },
-      { from: '.debug', to: '../' }
+      { from: '.debug', to: '../' },
+      { from: 'INSTALLATION.md', to: '../' }
     ])
   ],
 
