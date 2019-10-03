@@ -97,8 +97,6 @@ Once you click `Run and Generate`, RunwayML will start `running` and `processing
 
 ## Development
 
-TODO
-
 ### Debugging
 
 Open localhost:8088 in Google Chrome to see the `devtools` / debugging console. You can refresh the plugin like a website (CMD+R). Note that host .jsx files will not update this way! To refresh those, close the plugin panel and re-open.
