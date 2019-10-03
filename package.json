@@ -1,0 +1,39 @@
+{
+  "name": "runway-for-photoshop",
+  "version": "0.0.1",
+  "description": "Access RunwayML models directly from Adobe Photoshop.",
+  "license": "MIT",
+  "author": "Runway AI, Inc.",
+  "main": "code.js",
+  "scripts": {
+    "prebuild": "rm -rf ./dist",
+    "build": "npx webpack && rm -r ~/Library/'Application Support'/Adobe/CEP/extensions/Runway/ && cp -a ./dist ~/Library/'Application Support'/Adobe/CEP/extensions/Runway/",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npx onchange '**/*.(t|j)s*' -- npm run build"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-range": "^1.3.0",
+    "react-select": "^3.0.4",
+    "react-switch": "^5.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.8.5",
+    "copy-webpack-plugin": "^5.0.4",
+    "css-loader": "^3.1.0",
+    "csstype": "^2.6.6",
+    "file-loader": "^4.2.0",
+    "html-webpack-inline-source-plugin": "0.0.10",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.23.1",
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.5.3",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.38.0",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.0"
+  }
+}
