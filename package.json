@@ -7,7 +7,7 @@
   "main": "code.js",
   "scripts": {
     "prebuild": "rm -rf ./dist",
-    "build": "npx webpack && rm -r ~/Library/'Application Support'/Adobe/CEP/extensions/Runway/ && cp -a ./dist ~/Library/'Application Support'/Adobe/CEP/extensions/Runway/",
+    "build": "npx webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "npx onchange '**/*.(t|j)s*' -- npm run build"
   },
