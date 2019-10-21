@@ -3,7 +3,7 @@
 [![Open in RunwayML Badge](https://open-app.runwayml.com/gh-badge-app.svg)](https://open-app.runwayml.com/)
 
 
-Access [RunwayML](https://runwayml.com) directly from [Adobe Photoshop](www.adobe.com/photoshop‎): You can use this plugin to generate images, apply style transfer to your photos, get depth estimation from 2D images, generate new pieces of texts to your designs and more.
+Access [RunwayML](https://runwayml.com) directly from [Adobe Photoshop](https://www.adobe.com/photoshop‎): You can use this plugin to generate images, apply style transfer to your photos, get depth estimation from 2D images, generate new pieces of texts to your designs and more.
 
 ![RunwayML for Photoshop](images/ps-banner.gif)
 
