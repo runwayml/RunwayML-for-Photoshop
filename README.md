@@ -33,7 +33,11 @@ Unzip the plugin and copy the entire `RunwayML` directory to Photoshop Extension
 
 **Mac:** ~/Library/Application Support/Adobe/CEP/extensions
 
-More information is available [here](https://github.com/Adobe-CEP/CEP-Resources/blob/master/CEP_9.x/Documentation/CEP%209.0%20HTML%20Extension%20Cookbook.md#extension-folders).
+The Mac Library directory mentioned above is located in the root directory, or Macintosh HD, which does not appear in Finder nor the Desktop. 
+
+You can change the Finder Preferences to show it in the Finder sidebar and as an icon on the desktop. Click on **Finder** from the top menu, and in the General Tab, check off **Hard Disks**. Macintosh HD should appear on your Desktop.
+
+More information regarding Adobe CEP is available [here](https://github.com/Adobe-CEP/CEP-Resources/blob/master/CEP_9.x/Documentation/CEP%209.0%20HTML%20Extension%20Cookbook.md#extension-folders).
 
 4) Make sure `Runway.app` is running and you're signed in.
 
